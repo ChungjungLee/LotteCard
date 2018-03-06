@@ -1,19 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textAlignment="center"
             android:text="이름"/>
         <EditText
-            android:layout_width="match_parent"/>
-    </TableRow>
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-    <TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textAlignment="center"
             android:text="전화번호"/>
         <EditText
-            android:layout_width="match_parent"/>
-    </TableRow>
-</TableLayout>
+            android:id="@+id/tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="접수일"/>
+        <DatePicker
+            android:id="@+id/regiDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnRegi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="등록"/>
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="뒤로가기"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnExcelSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="엑셀쓰기"/>
+        <Button
+            android:id="@+id/btnExcelRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="엑셀읽기"/>
+    </LinearLayout>
+</LinearLayout>

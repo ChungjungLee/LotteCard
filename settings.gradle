@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':poi-3.10-FINAL-20140208'
